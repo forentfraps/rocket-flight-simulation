@@ -4,6 +4,7 @@ Made a graphical for rocket flying considering non-constant mass and air frictio
 I will be using meshchersky equation to compute my trajectory
 ![image](https://user-images.githubusercontent.com/29946764/159598462-2eda823c-e62a-445a-b9d8-93e8c4a5fce7.png)
 Trying the theory also in wolfram to see what to aim for
+
 1st part :
 
 ![image](https://user-images.githubusercontent.com/29946764/159598506-522cd685-e6ba-4d8a-8bfa-077669607949.png)
