@@ -7,21 +7,20 @@ G_BIG = 6.67430 * 10 ** (-11)                   #grav constant
 PLANET_MASS = 5.972 * 10 ** 24                  #desired planet mass
 PLANET_RADIUS = 6371000                         #desired planet radius
 AIR_DENSITY = 1.275                             #desired air density
-WIND_SPEED = 0#800  #                              UNUSED (FOR NOW)
-WIND_ALPHA = math.pi/2                   # UNUSED (FOR NOW)
-WIND_BETA = math.pi/4                      # UNUSED (FOR NOW)
-R1_MASS = 2500                                 #rocket components mass
+WIND_SPEED = 0#leave at 0                       UNUSED (FOR NOW)
+WIND_ALPHA = math.pi/2                          # UNUSED (FOR NOW)
+WIND_BETA = math.pi/4                           # UNUSED (FOR NOW)
+R1_MASS = 2500                                  #rocket components mass
 R1_S = 0.81                                     #rocket area
 R1_V = 1000                                     #rocket base speed
-R1F_MASS = 50000                               #rocket fuel mass
+R1F_MASS = 50000                                #rocket fuel mass
 R1F_CONSUMPTION = 900                           #rocket fuel consumption per second
 R1F_SPEED = 1000                                #fuel exhaustion speed relative to the rocket
-R1_ALPHA = math.pi/4                         #angle alpha in polar coordinates (X/Y plane)
-R1_BETA = math.pi/4                           #angle beta in polar coordinates (Z plane)
+R1_ALPHA = math.pi/4                            #angle alpha in polar coordinates (X/Y plane)
+R1_BETA = math.pi/4                             #angle beta in polar coordinates (Z plane)
 #SOUND_V = 330                                  #UNUSED
 G = G_BIG * PLANET_MASS/ (PLANET_RADIUS ** 2)   #computes g 
 BIGNUMBA = 200000                               #seconds to evaluate trajectory after fuel is no more, leave it very big, matplotlib is very smart
-#print(T_LIMIT)
 global fig, ax
 fig = plt.figure()                              #set up matplotlib for 3d plotting
 ax = fig.add_subplot(111,projection='3d')
@@ -30,7 +29,7 @@ ax.set_ylabel("y")
 ax.set_zlabel("z")
 
 def dxyzdt(f, t, rmass, fmass, fcons , fspeed, aird, rs, g): #solves the system of non-linear differential equations for first part of the trajectory, when fuel is present
-    vx = f[1]       #obtain derivatives for speeds
+    vx = f[1]       #obtain speeds(coordinate derivatives) and z coordinate
     vy = f[3]
     z  = f[4]
     vz = f[5]
@@ -51,6 +50,10 @@ def dxyz1dt(f, t, rmass, fmass, fcons , fspeed, aird, rs, g): #second part, with
     d2zdt = -(G_BIG * PLANET_MASS/(PLANET_RADIUS+z)**2) + ( - k * math.sqrt(vx ** 2 + vy ** 2 + vz ** 2+WIND_SPEED ** 2)*(vz+WIND_SPEED*math.cos(WIND_BETA)))/rmass
     return [vx,d2xdt,vy, d2ydt,vz, d2zdt]
 def plot_me(clr, a = math.pi/4, b = math.pi/4, fcons = 600, fsp = 10000, v = 1): #made for easier plotting
+    #fsp = fuel speed aka fuel exhaustion speed
+    #v = initial speed (better to leave at 1)
+    # a\b alpha and beta, polar coordinates fo initial speed
+    #fcons = fuel consumption
     T_LIMIT = R1F_MASS // fcons #seconds for the first part of the trajectory
     ns = np.linspace(0,T_LIMIT,T_LIMIT+1)
     solution = odeint(dxyzdt, [0,v * math.sin(a)*math.sin(b),0,v*math.sin(b)*math.cos(a),0,v*math.cos(b)], ns , args = ( R1_MASS, R1F_MASS, fcons, fsp, AIR_DENSITY, R1_S, G))                                      #solving 1st equation
@@ -59,7 +62,6 @@ def plot_me(clr, a = math.pi/4, b = math.pi/4, fcons = 600, fsp = 10000, v = 1):
     x=[] #merge arrays from the first and second part
     y=[]
     z=[]
-    flag = 1 
     for i in range (0,T_LIMIT):
         x.append(solution[:,0][i])
         y.append(solution[:,2][i])
@@ -67,12 +69,11 @@ def plot_me(clr, a = math.pi/4, b = math.pi/4, fcons = 600, fsp = 10000, v = 1):
     for i in range(0,BIGNUMBA):
         x.append(solution1[:,0][i])
         y.append(solution1[:,2][i])
-        if solution1[:,4][i] > 0 and flag == 1: #to prevent ugly results below z = 0
+        if solution1[:,4][i] > 0: #to prevent ugly results below z = 0
             z.append(solution1[:,4][i])
         else: 
             z.append(0)
-            flag = 0
-            break
+            break #ugly results will otherwise follow
     ax.plot(x,y,z,clr)
 #cool examples
 
