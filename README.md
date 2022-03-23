@@ -1,7 +1,7 @@
 # rocket-flight-simulation
 Made a graphical demonstration for rocket flying, considering non-constant mass and air friction, turned out to look pretty cool
 
-***Theory***
+# Theory
 
 For such tasks involving non-constant mass I will be using the *mesherskiy equation*
 
@@ -36,9 +36,9 @@ However we can try them out with some test data, to later reffer to this as an e
 
 ![image](https://user-images.githubusercontent.com/29946764/159787825-f77bca53-4a7e-40ee-b223-f7a30b3927e2.png)
 
-***Testing Theory***
+# Testing Theory
 
-# Im using this input to plot my data manually plot_me("red", a =math.pi/4 , b = math.pi/2.38,fcons =700,fsp = 23000 , v =10)
+ *Im using this input to plot my data manually:  plot_me("red", a =math.pi/4 , b = math.pi/2.38,fcons =700,fsp = 23000 , v =10)*
 
 it is a very horizontal trajectory, much like a real rocket
 
