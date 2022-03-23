@@ -26,6 +26,7 @@ After all those preparations we can finally make out final equations
 After expanding it into a 3 equation system it turnes out to be non-linear differential equations, which i am not going to solve analytically
 However we can try them out with some test data, to later reffer to this as an expected result 
 *Note:* I will be doing x/y reffering to horizontal/vertical plane, however in the code x\y is horizontal and z in vertical
+
 **PART 1**
 
 ![image](https://user-images.githubusercontent.com/29946764/159787772-13656a7d-63ef-4c58-8041-154328aa14b2.png)
