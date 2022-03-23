@@ -40,7 +40,7 @@ However we can try them out with some test data, to later reffer to this as an e
 
  *Im using this input to plot my data manually:  plot_me("red", a =math.pi/4 , b = math.pi/2.38,fcons =700,fsp = 23000 , v =10)*
 
-it is a very horizontal trajectory, much like a real rocket
+it has a very horizontal trajectory, much like a real rocket
 
 x1[t]
 
