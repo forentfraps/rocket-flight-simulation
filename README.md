@@ -1,5 +1,5 @@
 # rocket-flight-simulation
-Made a graphical for rocket flying considering non-constant mass and air friction, turned out to look pretty cool
+Made a graphical demonstration for rocket flying, considering non-constant mass and air friction, turned out to look pretty cool
 
 I will be using meshchersky equation to compute my trajectory
 ![image](https://user-images.githubusercontent.com/29946764/159598462-2eda823c-e62a-445a-b9d8-93e8c4a5fce7.png)
