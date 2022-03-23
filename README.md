@@ -7,7 +7,8 @@ Trying the theory also in wolfram to see what to aim for
 
 1st part :
 
-![image](https://user-images.githubusercontent.com/29946764/159598506-522cd685-e6ba-4d8a-8bfa-077669607949.png)
+![image](https://user-images.githubusercontent.com/29946764/159599894-b35580c7-2793-449f-be19-07c926f7b8ba.png)
+
 2nd part:
 
 ![image](https://user-images.githubusercontent.com/29946764/159598523-7c831299-a34c-462e-b982-480abe7a24d4.png)
