@@ -14,8 +14,11 @@ For such tasks involving non-constant mass I will be using the *mesherskiy equat
 
 
 Our rocket will have 2 phases:
+
     - With fuel, meaning differing mass, drag from the fuel exhaustion
+    
     - Without fuel, constant mass, basically only air friction
+    
 
 After all those preparations we can finally make out final equations 
 
