@@ -1,7 +1,7 @@
 # rocket-flight-simulation
 Made a graphical demonstration for rocket flying, considering non-constant mass and air friction, turned out to look pretty cool
 
-*** Theory ***
+***Theory***
 
 For such tasks involving non-constant mass I will be using the *mesherskiy equation*
 
