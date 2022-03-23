@@ -2,12 +2,12 @@
 Made a graphical demonstration for rocket flying, considering non-constant mass and air friction, turned out to look pretty cool
 
 I will be using meshchersky equation to compute my trajectory
-![image](https://user-images.githubusercontent.com/29946764/159598462-2eda823c-e62a-445a-b9d8-93e8c4a5fce7.png)
+![image](https://user-images.githubusercontent.com/29946764/159599945-4448400a-f3f2-404d-9973-79f1c7b60620.png)
 Trying the theory also in wolfram to see what to aim for
 
 1st part :
 
-![image](https://user-images.githubusercontent.com/29946764/159599894-b35580c7-2793-449f-be19-07c926f7b8ba.png)
+![image](https://user-images.githubusercontent.com/29946764/159599981-2aca0d55-b548-4f4f-895e-7171fa967d91.png)
 
 2nd part:
 
