@@ -17,8 +17,6 @@ Our rocket will have 2 phases:
     - With fuel, meaning differing mass, drag from the fuel exhaustion
     - Without fuel, constant mass, basically only air friction
 
-![image](https://user-images.githubusercontent.com/29946764/159786945-517c5ee2-cec4-41fe-ad94-85619401a853.png)
-
 After all those preparations we can finally make out final equations 
 
 ![image](https://user-images.githubusercontent.com/29946764/159787344-d4862e19-aa21-4866-9273-aad2ae614628.png)
