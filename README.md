@@ -1,30 +1,37 @@
 # rocket-flight-simulation
 Made a graphical demonstration for rocket flying, considering non-constant mass and air friction, turned out to look pretty cool
 
-I will be using meshchersky equation to compute my trajectory
-![image](https://user-images.githubusercontent.com/29946764/159599945-4448400a-f3f2-404d-9973-79f1c7b60620.png)
-Trying the theory also in wolfram to see what to aim for
+For such tasks involving non-constant mass I will be using the *mesherskiy equation*
 
-1st part :
+![image](https://user-images.githubusercontent.com/29946764/159786382-89347625-0936-4b18-a36b-2535b704c116.png)
 
-![image](https://user-images.githubusercontent.com/29946764/159599981-2aca0d55-b548-4f4f-895e-7171fa967d91.png)
 
-2nd part:
+"F.." means external forces, such as air friction and gravitation pull
 
-![image](https://user-images.githubusercontent.com/29946764/159598523-7c831299-a34c-462e-b982-480abe7a24d4.png)
+![image](https://user-images.githubusercontent.com/29946764/159786537-a4ddaf49-6d77-4fe7-829b-653450884776.png)
 
-I chose SciPy, however i also tried SymPy, but it seemed to struggle a lot and coulnt solve given equations
 
-When trying my model it seems that resuts are pretty accurate:
+Our rocket will have 2 phases:
+    - With fuel, meaning differing mass, drag from the fuel exhaustion
+    - Without fuel, constant mass, basically only air friction
 
-![image](https://user-images.githubusercontent.com/29946764/159598702-d0067f92-43a5-43a5-a2f2-a0bd4cf66920.png)
+![image](https://user-images.githubusercontent.com/29946764/159786945-517c5ee2-cec4-41fe-ad94-85619401a853.png)
 
-After playing around with fuel consumption and angles i also got these interesting results:
+After all those preparations we can finally make out final equations 
 
-![image](https://user-images.githubusercontent.com/29946764/159598829-7ec59928-e72e-4ad3-91b4-a0a5d56aeb1e.png)
+![image](https://user-images.githubusercontent.com/29946764/159787344-d4862e19-aa21-4866-9273-aad2ae614628.png)
 
-![image](https://user-images.githubusercontent.com/29946764/159598844-0934e345-88bb-4f52-a95d-2ef06e222ad0.png)
+After expanding it into a 3 equation system it turnes out to be non-linear differential equations, which i am not going to solve analytically
+However we can try them out with some test data, to later reffer to this as an expected result 
+*Note:* I will be doing x/y reffering to horizontal/vertical plane, however in the code x\y is horizontal and z in vertical
+**PART 1**
 
-Such odd behaviour could be explained by air friction being proportional to speed^2 which slows down substantially but then it speeds back up, due to fuel being left
+![image](https://user-images.githubusercontent.com/29946764/159787772-13656a7d-63ef-4c58-8041-154328aa14b2.png)
+
+**PART 2**
+
+![image](https://user-images.githubusercontent.com/29946764/159787825-f77bca53-4a7e-40ee-b223-f7a30b3927e2.png)
+
+After that I proceeded
 
 HUGE THANKS TO Chelovechecheggg#5451
