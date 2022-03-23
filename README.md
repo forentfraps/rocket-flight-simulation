@@ -32,6 +32,14 @@ However we can try them out with some test data, to later reffer to this as an e
 
 ![image](https://user-images.githubusercontent.com/29946764/159787825-f77bca53-4a7e-40ee-b223-f7a30b3927e2.png)
 
-After that I proceeded
+***Testing Theory***
+x1[t]
+
+![image](https://user-images.githubusercontent.com/29946764/159794622-5e3ff90f-abbd-47d4-ab7b-04604f6426ac.png)
+
+v1x[t]
+
+![image](https://user-images.githubusercontent.com/29946764/159794643-bc681ee0-d33f-4c6f-8bb6-1f7b62d77fed.png)
+
 
 HUGE THANKS TO Chelovechecheggg#5451
