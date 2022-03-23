@@ -26,3 +26,5 @@ After playing around with fuel consumption and angles i also got these interesti
 ![image](https://user-images.githubusercontent.com/29946764/159598844-0934e345-88bb-4f52-a95d-2ef06e222ad0.png)
 
 Such odd behaviour could be explained by air friction being proportional to speed^2 which slows down substantially but then it speeds back up, due to fuel being left
+
+HUGE THANKS TO Chelovechecheggg#5451
