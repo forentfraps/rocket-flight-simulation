@@ -97,4 +97,10 @@ I will include some actual plots, which my code can perform:
 ![image](https://user-images.githubusercontent.com/29946764/159796292-3384fd79-4953-4b55-a57d-be8547a3969d.png)
 
 
+**TODO:**
+    
+    -Make dynamic graphs, add easy support for x/y/z[t]  as shown above (were done in a janky way)
+    
+    -Fix the wind
+
 HUGE THANKS TO Chelovechecheggg#5451 for helping
